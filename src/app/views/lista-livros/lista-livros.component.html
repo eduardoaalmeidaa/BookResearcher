@@ -1,0 +1,37 @@
+<section class="container">
+  <header>Qual livro você está procurando?
+  </header>
+  <div class="busca">
+     <input
+        type="search"
+        [formControl]="campoBusca"
+        >
+     <button>
+     <img src="assets/imagens/procurar.png" alt="Lupa de cor preto">
+     </button>
+  </div>
+  <p>Busque por assunto, autoria, nome...</p>
+  <div class="resultados mensagem-erro" *ngIf="mensagemErro">
+     {{ mensagemErro }}
+  </div>
+  <div
+     class="resultados"
+     *ngIf="livrosEncontrados$ | async ">
+     {{ livrosResultado.totalItems}} resultados encontrados
+  </div>
+  <div
+     class="container-card"
+     *ngIf="livrosEncontrados$ | async as listaLivros, else telaInicial">
+     <div *ngFor="let livro of listaLivros">
+        <app-livro [livro]="livro"></app-livro>
+     </div>
+  </div>
+  <ng-template #telaInicial>
+     <div class="imagens">
+        <h1 class="titulo">Procure qualquer livro<br>que desejar em<br>nossa prateleira!</h1>
+        <img
+           class="ilustracao"
+           src="../../assets/imagens/estante-de-livros.png"
+           alt="Ilustração de uma estante de livros">
+     </div>
+  </ng-template>
