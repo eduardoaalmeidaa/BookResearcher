@@ -7,11 +7,10 @@ O site integra-se com uma API de terceiros para buscar dados dos livros e aprese
 
 ## Principais Recursos
 - Layout limpo e moderno desenvolvido com Angular, proporcionando uma navegação fácil e agradável.
-- Consumo da API ViaCEP
 
 ## Tecnologias Utilizadas
 ### Angular
-- Framework principal para a construção da interface do usuário.
+- Framework principal para a construção da interface.
 
 ### TypeScript
 - Linguagem utilizada para o desenvolvimento de scripts e funcionalidades.
