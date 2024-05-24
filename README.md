@@ -1,4 +1,4 @@
-# BookResearcher
+# Book Researcher
 
 ## Visão Geral
 
